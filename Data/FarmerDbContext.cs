@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using crowdfarming.Models.Domains;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace crowdfarming.Data
 {
-    public class FarmerDbContext : DbContext
+    public class FarmerDbContext :  IdentityDbContext<IdentityUser>
     {
         public FarmerDbContext(DbContextOptions<FarmerDbContext> options) : base(options)
         {
