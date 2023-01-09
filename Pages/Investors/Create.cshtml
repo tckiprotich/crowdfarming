@@ -1,0 +1,76 @@
+@page
+@model CrowdFarming.Pages_Investors.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Investor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Investor.Name" class="control-label"></label>
+                <input asp-for="Investor.Name" class="form-control" />
+                <span asp-validation-for="Investor.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.Email" class="control-label"></label>
+                <input asp-for="Investor.Email" class="form-control" />
+                <span asp-validation-for="Investor.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.Password" class="control-label"></label>
+                <input asp-for="Investor.Password" class="form-control" />
+                <span asp-validation-for="Investor.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.Address" class="control-label"></label>
+                <input asp-for="Investor.Address" class="form-control" />
+                <span asp-validation-for="Investor.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.Phone" class="control-label"></label>
+                <input asp-for="Investor.Phone" class="form-control" />
+                <span asp-validation-for="Investor.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.Image" class="control-label"></label>
+                <input asp-for="Investor.Image" class="form-control" />
+                <span asp-validation-for="Investor.Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.Description" class="control-label"></label>
+                <input asp-for="Investor.Description" class="form-control" />
+                <span asp-validation-for="Investor.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Investor.Status" /> @Html.DisplayNameFor(model => model.Investor.Status)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.CreatedAt" class="control-label"></label>
+                <input asp-for="Investor.CreatedAt" class="form-control" />
+                <span asp-validation-for="Investor.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investor.UpdatedAt" class="control-label"></label>
+                <input asp-for="Investor.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Investor.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
