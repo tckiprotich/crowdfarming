@@ -1,0 +1,49 @@
+@page
+@model CrowdFarming.Pages_Investments.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Investment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Investment.Amount" class="control-label"></label>
+                <input asp-for="Investment.Amount" class="form-control" />
+                <span asp-validation-for="Investment.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investment.CreatedAt" class="control-label"></label>
+                <input asp-for="Investment.CreatedAt" class="form-control" />
+                <span asp-validation-for="Investment.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investment.UpdatedAt" class="control-label"></label>
+                <input asp-for="Investment.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Investment.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investment.InvestorID" class="control-label"></label>
+                <select asp-for="Investment.InvestorID" class ="form-control" asp-items="ViewBag.InvestorID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Investment.ProjectID" class="control-label"></label>
+                <select asp-for="Investment.ProjectID" class ="form-control" asp-items="ViewBag.ProjectID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
